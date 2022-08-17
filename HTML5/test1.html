@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function getColor(){
+                var color=document.getElementById('myColor').value;
+                alert(color);
+            }  
+            function getDate(){
+                var date=document.getElementById('myDate').value;
+                alert(date);
+            }           
+        </script>
+    </head>
+    <body>
+         <header> Site header</header>
+         <article>Your page main content goes here</article>
+         <aside> </aside>
+        <footer>Indicates a footer, of a page or a section></footer>
+       
+        <form method="get" action="">
+            <label for="mycolor">Select Color</label>
+            <input type="color" value="#00ff00" id="myColor">
+            <button type="button" onClick="getColor()">GetColor</button>
+
+            <label for="myDate">Select Date</label>
+            <input type="date" value="2022-01-12" id="myDate">
+            <button type="button" onClick="getDate()">GetDate</button>
+            <label for="myEmail">Enter Email Address</label>
+            <input type="email"  id="myEmail" required>
+            
+            <label for="myNo">Enter a Number</label>
+            <input type="number"  id="myNo" required min="1" max="12" step="0.5">
+            <input type="submit" value="Click here"/>
+            <input type="search" placeholder="type something">
+            <input type="tel" placeholder="xx-xxxx-xxxx" required>
+            <input type="submit" value="Click here"/>
+
+        </form>
+       
+       
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+    
+    </body>
+</html>

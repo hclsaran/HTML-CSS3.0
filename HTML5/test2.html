@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+           canvas{border:1px solid #000 }
+        </style>
+        <script>
+         window.onload=function(){
+             var canvas=document.getElementById("myCanvas");
+             var ctx=canvas.getContext('2d');
+             ctx.rect(50,50,200,100);
+             ctx.fillStyle="#FB8B89";
+             ctx.fill();
+             ctx.lineWidth=5;
+             ctx.strokeStyle="blue";
+             ctx.stroke();
+         }
+
+         if(localStorage){
+             $(document).ready(function(){
+                 $(".save").click(function(){
+                     var firstName= $("#firstName").val();
+                     localStorage.setItem("first_name",firstName);
+                     console.log(" Your firstName is saved")
+                 });
+                 $(".access").click(function(){
+                     console.log("Hi "+localStorage.getItem("first_name"))
+                 });
+             });
+         }else{
+             console.log('Your browser doesnt support local storage')
+         }
+        </script>
+    </head>
+    <body>
+        <form>
+         <label>First Name : <input type="text" id="firstName"></label>
+         <button type="button" class="save">Save the Name</button>
+         <button type="button" class="access">Get the Name</button>
+
+        </form>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+        <audio controls="controls" >
+         <source src="fly.mp3" type="audio/mpeg">
+         <source src="bird.mp3" type="audio/ogg">
+    </audio>
+    <video controls="controls" >
+        <source src="fly.mp4" type="video/mpeg">
+        <source src="bird.ogv" type="audio/ogg">
+   </video>
+    </body>
+    <!--  Application Cache in HTML5
+        Offline browsing
+         Improves performance
+         Reduce Http request and server load
+    
+    -->
+</html>

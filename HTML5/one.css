@@ -1,0 +1,10 @@
+h1.abc {
+    color:aqua;
+}
+h1,h2,h3{
+   color:blue; 
+   font-weight: normal;
+   letter-spacing: .4em;
+   margin-bottom:1em ;
+   text-transform: lowercase;
+}
